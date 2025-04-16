@@ -59,6 +59,9 @@
                                 <rect key="frame" x="24" y="214" width="345" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="camera" catalog="system" title="Image Capture &amp; Gallery Selection"/>
+                                <connections>
+                                    <action selector="didTapViewImage:" destination="Q6l-vz-39k" eventType="touchUpInside" id="zPu-xm-WHM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NUG-n6-azx"/>
@@ -92,6 +95,68 @@
             </objects>
             <point key="canvasLocation" x="3516" y="5"/>
         </scene>
+        <!--Image Source Selection View Controller-->
+        <scene sceneID="2AS-XO-7pa">
+            <objects>
+                <viewController storyboardIdentifier="ImageSourceSelectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ike-P2-5Zi" customClass="ImageSourceSelectionViewController" customModule="BookXpert" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZNY-zg-Egz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TJz-lT-1ME">
+                                <rect key="frame" x="30" y="243.66666666666663" width="333" height="265"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="TJz-lT-1ME" secondAttribute="height" multiplier="333:265" id="UnW-fE-Np5"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iH6-4Z-QAn">
+                                <rect key="frame" x="24" y="556.66666666666663" width="84" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Camera"/>
+                                <connections>
+                                    <action selector="openCamera:" destination="ike-P2-5Zi" eventType="touchUpInside" id="4eb-30-sSs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qv9-ds-Afb">
+                                <rect key="frame" x="291" y="556.66666666666663" width="78" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Gallery"/>
+                                <connections>
+                                    <action selector="openGallery:" destination="ike-P2-5Zi" eventType="touchUpInside" id="yvP-3t-viy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe down the screen to close" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4OQ-5Y-dVG">
+                                <rect key="frame" x="24" y="83" width="345" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemFillColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3Ay-MB-cPD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iH6-4Z-QAn" firstAttribute="leading" secondItem="3Ay-MB-cPD" secondAttribute="leading" constant="24" id="7KN-3Y-CLr"/>
+                            <constraint firstItem="3Ay-MB-cPD" firstAttribute="trailing" secondItem="qv9-ds-Afb" secondAttribute="trailing" constant="24" id="KmF-wP-Ouw"/>
+                            <constraint firstItem="iH6-4Z-QAn" firstAttribute="top" secondItem="TJz-lT-1ME" secondAttribute="bottom" constant="48" id="XEb-VE-Ozh"/>
+                            <constraint firstItem="TJz-lT-1ME" firstAttribute="centerY" secondItem="ZNY-zg-Egz" secondAttribute="centerY" constant="-50" id="a4k-r2-9Dm"/>
+                            <constraint firstItem="3Ay-MB-cPD" firstAttribute="trailing" secondItem="4OQ-5Y-dVG" secondAttribute="trailing" constant="24" id="az2-cx-rly"/>
+                            <constraint firstItem="qv9-ds-Afb" firstAttribute="top" secondItem="TJz-lT-1ME" secondAttribute="bottom" constant="48" id="kq4-b4-KaC"/>
+                            <constraint firstItem="4OQ-5Y-dVG" firstAttribute="top" secondItem="3Ay-MB-cPD" secondAttribute="top" constant="24" id="pAN-Kp-ChM"/>
+                            <constraint firstItem="3Ay-MB-cPD" firstAttribute="trailing" secondItem="TJz-lT-1ME" secondAttribute="trailing" constant="30" id="r0a-tF-JhG"/>
+                            <constraint firstItem="4OQ-5Y-dVG" firstAttribute="leading" secondItem="3Ay-MB-cPD" secondAttribute="leading" constant="24" id="wMs-dY-ncR"/>
+                            <constraint firstItem="TJz-lT-1ME" firstAttribute="leading" secondItem="3Ay-MB-cPD" secondAttribute="leading" constant="30" id="zBh-AG-beG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="iH6-4Z-QAn" id="Mdd-cg-tPk"/>
+                        <outlet property="galleryButton" destination="qv9-ds-Afb" id="oLJ-w4-yfy"/>
+                        <outlet property="imageView" destination="TJz-lT-1ME" id="raP-hw-oNR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dVh-Ml-mmE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4643.5114503816794" y="-5.6338028169014089"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Klf-mB-r0l">
             <objects>
@@ -117,6 +182,9 @@
         <image name="newspaper" catalog="system" width="128" height="111"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemFillColor">
+            <color red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

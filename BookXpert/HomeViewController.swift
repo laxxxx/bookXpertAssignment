@@ -25,5 +25,11 @@ class HomeViewController: UIViewController {
         pdfVC.modalPresentationStyle = .fullScreen
         present(pdfVC, animated: true, completion: nil)
     }
-
+    
+    @IBAction func didTapViewImage(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let imageVC = storyboard.instantiateViewController(withIdentifier: "ImageSourceSelectionViewController") as? ImageSourceSelectionViewController {
+            present(imageVC, animated: true)
+        }
+    }
 }
