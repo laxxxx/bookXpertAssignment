@@ -44,7 +44,7 @@ class PDFViewerViewController: UIViewController {
         closeButton.layer.cornerRadius = 20
         closeButton.addTarget(self, action: #selector(closeTapped), for: .touchUpInside)
         closeButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(closeButton) // Add after PDFView so it's on top
+        view.addSubview(closeButton)
         
         NSLayoutConstraint.activate([
             closeButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),

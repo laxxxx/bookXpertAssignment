@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqO-DG-QxP">
-                                <rect key="frame" x="111" y="399" width="171" height="35"/>
+                                <rect key="frame" x="99" y="398" width="195" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Sign in with Google"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Google" title="Sign in with Google"/>
                                 <connections>
                                     <action selector="didTapSignInWithGoogle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EZw-Md-q69"/>
                                 </connections>
@@ -55,10 +55,18 @@
                                     <action selector="didTapViewPDF:" destination="Q6l-vz-39k" eventType="touchUpInside" id="b46-7I-8EI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZz-LZ-Bav">
+                                <rect key="frame" x="24" y="214" width="345" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="camera" catalog="system" title="Image Capture &amp; Gallery Selection"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NUG-n6-azx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="NUG-n6-azx" firstAttribute="trailing" secondItem="gZz-LZ-Bav" secondAttribute="trailing" constant="24" id="314-Ts-rIB"/>
+                            <constraint firstItem="gZz-LZ-Bav" firstAttribute="leading" secondItem="NUG-n6-azx" secondAttribute="leading" constant="24" id="3X6-HR-jQ3"/>
+                            <constraint firstItem="gZz-LZ-Bav" firstAttribute="top" secondItem="Izw-Yo-gwC" secondAttribute="bottom" constant="60" id="EFy-oq-6uu"/>
                             <constraint firstItem="Izw-Yo-gwC" firstAttribute="top" secondItem="NUG-n6-azx" secondAttribute="top" constant="60" id="J6x-q0-ZOa"/>
                             <constraint firstItem="Izw-Yo-gwC" firstAttribute="leading" secondItem="NUG-n6-azx" secondAttribute="leading" constant="24" id="KUj-f7-vTg"/>
                             <constraint firstItem="NUG-n6-azx" firstAttribute="trailing" secondItem="Izw-Yo-gwC" secondAttribute="trailing" constant="24" id="pm8-He-Jqx"/>
@@ -104,6 +112,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Google" width="24" height="24"/>
+        <image name="camera" catalog="system" width="128" height="93"/>
         <image name="newspaper" catalog="system" width="128" height="111"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
