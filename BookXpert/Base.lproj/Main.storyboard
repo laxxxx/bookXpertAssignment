@@ -63,16 +63,27 @@
                                     <action selector="didTapViewImage:" destination="Q6l-vz-39k" eventType="touchUpInside" id="zPu-xm-WHM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jad-pb-lsa">
+                                <rect key="frame" x="24" y="309" width="345" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="swiftdata" catalog="system" title="Image Capture &amp; Gallery Selection"/>
+                                <connections>
+                                    <action selector="didTapAPICoreData:" destination="Q6l-vz-39k" eventType="touchUpInside" id="h5S-sg-o4I"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NUG-n6-azx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Jad-pb-lsa" firstAttribute="top" secondItem="gZz-LZ-Bav" secondAttribute="bottom" constant="60" id="2nD-Df-c7m"/>
                             <constraint firstItem="NUG-n6-azx" firstAttribute="trailing" secondItem="gZz-LZ-Bav" secondAttribute="trailing" constant="24" id="314-Ts-rIB"/>
                             <constraint firstItem="gZz-LZ-Bav" firstAttribute="leading" secondItem="NUG-n6-azx" secondAttribute="leading" constant="24" id="3X6-HR-jQ3"/>
                             <constraint firstItem="gZz-LZ-Bav" firstAttribute="top" secondItem="Izw-Yo-gwC" secondAttribute="bottom" constant="60" id="EFy-oq-6uu"/>
                             <constraint firstItem="Izw-Yo-gwC" firstAttribute="top" secondItem="NUG-n6-azx" secondAttribute="top" constant="60" id="J6x-q0-ZOa"/>
                             <constraint firstItem="Izw-Yo-gwC" firstAttribute="leading" secondItem="NUG-n6-azx" secondAttribute="leading" constant="24" id="KUj-f7-vTg"/>
+                            <constraint firstItem="NUG-n6-azx" firstAttribute="trailing" secondItem="Jad-pb-lsa" secondAttribute="trailing" constant="24" id="d45-dm-ei4"/>
                             <constraint firstItem="NUG-n6-azx" firstAttribute="trailing" secondItem="Izw-Yo-gwC" secondAttribute="trailing" constant="24" id="pm8-He-Jqx"/>
+                            <constraint firstItem="Jad-pb-lsa" firstAttribute="leading" secondItem="NUG-n6-azx" secondAttribute="leading" constant="24" id="xTW-uZ-Sbd"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -157,6 +168,40 @@
             </objects>
             <point key="canvasLocation" x="4643.5114503816794" y="-5.6338028169014089"/>
         </scene>
+        <!--Product View Controller-->
+        <scene sceneID="vNm-g3-apf">
+            <objects>
+                <viewController storyboardIdentifier="ProductViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Rwb-rg-9lP" customClass="ProductViewController" customModule="BookXpert" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ry7-DD-E1B">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FjJ-eL-IBL">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Rwb-rg-9lP" id="4Fn-Jl-VIN"/>
+                                    <outlet property="delegate" destination="Rwb-rg-9lP" id="qR9-af-baV"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LiS-xl-pVn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="FjJ-eL-IBL" secondAttribute="bottom" id="9OL-tX-Il8"/>
+                            <constraint firstItem="FjJ-eL-IBL" firstAttribute="trailing" secondItem="LiS-xl-pVn" secondAttribute="trailing" id="Pu6-nT-cLL"/>
+                            <constraint firstItem="FjJ-eL-IBL" firstAttribute="top" secondItem="LiS-xl-pVn" secondAttribute="top" id="bmg-r3-lvn"/>
+                            <constraint firstItem="FjJ-eL-IBL" firstAttribute="leading" secondItem="LiS-xl-pVn" secondAttribute="leading" id="sC0-CH-6kO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="FjJ-eL-IBL" id="Ne2-eJ-Tt3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1vr-J0-1gk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5577.8625954198469" y="0.70422535211267612"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Klf-mB-r0l">
             <objects>
@@ -179,6 +224,7 @@
         <image name="Google" width="24" height="24"/>
         <image name="camera" catalog="system" width="128" height="93"/>
         <image name="newspaper" catalog="system" width="128" height="111"/>
+        <image name="swiftdata" catalog="system" width="128" height="108"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

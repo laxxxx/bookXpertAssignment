@@ -32,4 +32,11 @@ class HomeViewController: UIViewController {
             present(imageVC, animated: true)
         }
     }
+    
+    @IBAction func didTapAPICoreData(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let imageVC = storyboard.instantiateViewController(withIdentifier: "ProductViewController") as? ProductViewController {
+            present(imageVC, animated: true)
+        }
+    }
 }

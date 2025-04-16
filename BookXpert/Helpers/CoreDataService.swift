@@ -43,7 +43,7 @@ class CoreDataService {
     }
     
     // MARK: - Save User Details
-
+    
     /// Saves the authenticated user's details in Core Data.
     func saveUser(uid: String, email: String, displayName: String?) {
         // Create a new instance of the UserEntity
@@ -62,4 +62,3 @@ class CoreDataService {
         }
     }
 }
-
