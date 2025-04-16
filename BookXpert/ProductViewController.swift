@@ -17,6 +17,7 @@ class ProductViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.separatorColor = .clear
         tableView.register(UINib(nibName: "ProductTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         
         viewModel.reloadUI = { [weak self] in
@@ -46,8 +47,8 @@ extension ProductViewController: UITableViewDataSource, UITableViewDelegate {
         }
 
         let product = viewModel.product(at: indexPath.row)
-        cell.id.text = "id - \(product.id)"
-        cell.name.text = "name -\(product.name)"
+        cell.id.text = "ID - \(product.id)"
+        cell.name.text = "Name -\(product.name)"
         cell.data.text = product.data?.map { "\($0.key): \($0.value.description)" }.joined(separator: "\n") ?? "No Data"
         return cell
     }
