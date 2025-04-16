@@ -37,7 +37,7 @@ class PDFViewerViewController: UIViewController {
 
     private func setupCloseButton() {
         let closeButton = UIButton(type: .system)
-        closeButton.setTitle("✖︎", for: .normal)
+        closeButton.setTitle("✕", for: .normal)
         closeButton.titleLabel?.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         closeButton.tintColor = .black
         closeButton.backgroundColor = UIColor.white.withAlphaComponent(0.8)
