@@ -66,9 +66,17 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jad-pb-lsa">
                                 <rect key="frame" x="24" y="309" width="345" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="swiftdata" catalog="system" title="Image Capture &amp; Gallery Selection"/>
+                                <buttonConfiguration key="configuration" style="plain" image="swiftdata" catalog="system" title="API Integration &amp; Core Data "/>
                                 <connections>
                                     <action selector="didTapAPICoreData:" destination="Q6l-vz-39k" eventType="touchUpInside" id="h5S-sg-o4I"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Er3-oa-MiS">
+                                <rect key="frame" x="24" y="404" width="345" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="rectangle.portrait.and.arrow.right" catalog="system" title="Log out"/>
+                                <connections>
+                                    <action selector="didTapLogout:" destination="Q6l-vz-39k" eventType="touchUpInside" id="QSp-Nc-Hkp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -81,8 +89,11 @@
                             <constraint firstItem="gZz-LZ-Bav" firstAttribute="top" secondItem="Izw-Yo-gwC" secondAttribute="bottom" constant="60" id="EFy-oq-6uu"/>
                             <constraint firstItem="Izw-Yo-gwC" firstAttribute="top" secondItem="NUG-n6-azx" secondAttribute="top" constant="60" id="J6x-q0-ZOa"/>
                             <constraint firstItem="Izw-Yo-gwC" firstAttribute="leading" secondItem="NUG-n6-azx" secondAttribute="leading" constant="24" id="KUj-f7-vTg"/>
+                            <constraint firstItem="Er3-oa-MiS" firstAttribute="top" secondItem="Jad-pb-lsa" secondAttribute="bottom" constant="60" id="Mhd-tf-Ao0"/>
                             <constraint firstItem="NUG-n6-azx" firstAttribute="trailing" secondItem="Jad-pb-lsa" secondAttribute="trailing" constant="24" id="d45-dm-ei4"/>
                             <constraint firstItem="NUG-n6-azx" firstAttribute="trailing" secondItem="Izw-Yo-gwC" secondAttribute="trailing" constant="24" id="pm8-He-Jqx"/>
+                            <constraint firstItem="NUG-n6-azx" firstAttribute="trailing" secondItem="Er3-oa-MiS" secondAttribute="trailing" constant="24" id="urM-HP-n7j"/>
+                            <constraint firstItem="Er3-oa-MiS" firstAttribute="leading" secondItem="NUG-n6-azx" secondAttribute="leading" constant="24" id="w5T-fH-cq4"/>
                             <constraint firstItem="Jad-pb-lsa" firstAttribute="leading" secondItem="NUG-n6-azx" secondAttribute="leading" constant="24" id="xTW-uZ-Sbd"/>
                         </constraints>
                     </view>
@@ -224,6 +235,7 @@
         <image name="Google" width="24" height="24"/>
         <image name="camera" catalog="system" width="128" height="93"/>
         <image name="newspaper" catalog="system" width="128" height="111"/>
+        <image name="rectangle.portrait.and.arrow.right" catalog="system" width="128" height="109"/>
         <image name="swiftdata" catalog="system" width="128" height="108"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
