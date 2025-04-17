@@ -79,6 +79,18 @@
                                     <action selector="didTapLogout:" destination="Q6l-vz-39k" eventType="touchUpInside" id="QSp-Nc-Hkp"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" preferredStyle="sliding" translatesAutoresizingMaskIntoConstraints="NO" id="2GS-pN-Yh0">
+                                <rect key="frame" x="232" y="499" width="51" height="31"/>
+                                <connections>
+                                    <action selector="themeSwitchChanged:" destination="Q6l-vz-39k" eventType="touchUpInside" id="Pag-Kd-rOX"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaJ-Mv-YqZ">
+                                <rect key="frame" x="91.666666666666686" y="504" width="116.33333333333331" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NUG-n6-azx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -86,17 +98,24 @@
                             <constraint firstItem="Jad-pb-lsa" firstAttribute="top" secondItem="gZz-LZ-Bav" secondAttribute="bottom" constant="60" id="2nD-Df-c7m"/>
                             <constraint firstItem="NUG-n6-azx" firstAttribute="trailing" secondItem="gZz-LZ-Bav" secondAttribute="trailing" constant="24" id="314-Ts-rIB"/>
                             <constraint firstItem="gZz-LZ-Bav" firstAttribute="leading" secondItem="NUG-n6-azx" secondAttribute="leading" constant="24" id="3X6-HR-jQ3"/>
+                            <constraint firstItem="2GS-pN-Yh0" firstAttribute="centerX" secondItem="VgL-6O-Itr" secondAttribute="centerX" constant="60" id="5Lq-sr-NUf"/>
+                            <constraint firstItem="2GS-pN-Yh0" firstAttribute="top" secondItem="Er3-oa-MiS" secondAttribute="bottom" constant="60" id="8yc-Bk-dF4"/>
+                            <constraint firstItem="2GS-pN-Yh0" firstAttribute="leading" secondItem="YaJ-Mv-YqZ" secondAttribute="trailing" constant="24" id="CZj-TC-JgN"/>
                             <constraint firstItem="gZz-LZ-Bav" firstAttribute="top" secondItem="Izw-Yo-gwC" secondAttribute="bottom" constant="60" id="EFy-oq-6uu"/>
                             <constraint firstItem="Izw-Yo-gwC" firstAttribute="top" secondItem="NUG-n6-azx" secondAttribute="top" constant="60" id="J6x-q0-ZOa"/>
                             <constraint firstItem="Izw-Yo-gwC" firstAttribute="leading" secondItem="NUG-n6-azx" secondAttribute="leading" constant="24" id="KUj-f7-vTg"/>
                             <constraint firstItem="Er3-oa-MiS" firstAttribute="top" secondItem="Jad-pb-lsa" secondAttribute="bottom" constant="60" id="Mhd-tf-Ao0"/>
                             <constraint firstItem="NUG-n6-azx" firstAttribute="trailing" secondItem="Jad-pb-lsa" secondAttribute="trailing" constant="24" id="d45-dm-ei4"/>
+                            <constraint firstItem="YaJ-Mv-YqZ" firstAttribute="centerY" secondItem="2GS-pN-Yh0" secondAttribute="centerY" id="jZg-z7-Ja2"/>
                             <constraint firstItem="NUG-n6-azx" firstAttribute="trailing" secondItem="Izw-Yo-gwC" secondAttribute="trailing" constant="24" id="pm8-He-Jqx"/>
                             <constraint firstItem="NUG-n6-azx" firstAttribute="trailing" secondItem="Er3-oa-MiS" secondAttribute="trailing" constant="24" id="urM-HP-n7j"/>
                             <constraint firstItem="Er3-oa-MiS" firstAttribute="leading" secondItem="NUG-n6-azx" secondAttribute="leading" constant="24" id="w5T-fH-cq4"/>
                             <constraint firstItem="Jad-pb-lsa" firstAttribute="leading" secondItem="NUG-n6-azx" secondAttribute="leading" constant="24" id="xTW-uZ-Sbd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="themeSwitch" destination="2GS-pN-Yh0" id="9vn-am-0cc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WW9-Zu-Cx9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -239,6 +258,9 @@
         <image name="swiftdata" catalog="system" width="128" height="108"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemFillColor">
             <color red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>

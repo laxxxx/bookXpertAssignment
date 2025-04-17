@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Firebase Initialization
         FirebaseApp.configure()
+        Theme.apply(.current)
         return true
     }
     

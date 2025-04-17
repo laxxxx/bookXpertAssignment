@@ -11,10 +11,19 @@ import GoogleSignIn
 
 class HomeViewController: UIViewController {
     
+    
+    @IBOutlet weak var themeSwitch: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("HomeViewController loaded")
+        themeSwitch.isOn = (Theme.current == .system)
         
+    }
+    
+    @IBAction func themeSwitchChanged(_ sender: UISwitch) {
+        let newTheme: Theme = sender.isOn ? .dark : .light
+        Theme.current = newTheme
     }
     
     @IBAction func didTapViewPDF(_ sender: UIButton) {
